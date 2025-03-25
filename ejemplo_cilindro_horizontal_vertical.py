@@ -40,10 +40,10 @@ def coeficiente_conveccion_cilindro(T_s, T_inf, D, L, orientacion):
     return h
 
 # Parámetros de entrada
-T_s = 350.15  # K (77°C)
-T_inf = 300.15  # K (27°C)
-D = 0.05  # m (diámetro del cilindro)
-L = 0.5  # m (longitud del cilindro)
+T_s = 22+273.15   # K (77°C)
+T_inf = 2+273.15  # K (27°C)
+D = 0.10  # m (diámetro del cilindro)
+L = 0.10  # m (longitud del cilindro)
 
 # Cálculo del coeficiente de convección
 h_vertical = coeficiente_conveccion_cilindro(T_s, T_inf, D, L, "vertical")

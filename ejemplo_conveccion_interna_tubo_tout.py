@@ -44,7 +44,9 @@ def calcular_flujo_interno(T_in, T_wall, P, D, L, U, fluid):
         
         # Cálculo de la nueva T_out a partir del balance de energía
         Q = h * A_s * (T_wall - T_prom)
-        T_out_new = T_in + Q / (m_dot * cp)
+#        T_out_new = T_in + Q / (m_dot * cp) 
+        perim=np.pi*D
+        T_out_new=(T_wall-T_in)*np.exp(-perim*L*h/(m_dot*cp))
         
         # Criterio de convergencia
         if abs(T_out_new - T_out) < error:
