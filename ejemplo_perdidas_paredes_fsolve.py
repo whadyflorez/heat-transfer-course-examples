@@ -11,14 +11,14 @@ import numpy as np
 from scipy.optimize import fsolve
 
 k=0.1 #W/(m.K)
-L=0.5 #m
+L=0.50 #m
 depth=1.0
 height=1.0
 s=5.67e-8
 e=0.8
 As=height*depth
 At=As
-hin=100.0 #W/(m^2.K)
+hin=50.0 #W/(m^2.K)
 hout=10.0
 Tin=800.0+273.15
 Tout=25+273.15
