@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 T_i = 120          # Temperatura de la pared interna (°C)
 T_inf = 25         # Temperatura del ambiente (°C)
 r1 = 0.05          # Radio externo de la tubería (m)
-k = 0.72           # Conductividad térmica del aislamiento (W/m·K)
+k = 0.72          # Conductividad térmica del aislamiento (W/m·K)
 h = 10            # Coeficiente de convección externo (W/m²·K)
 L = 1.0            # Longitud de la tubería (m)
 
