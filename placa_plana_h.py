@@ -3,16 +3,18 @@ import numpy as np
 
 # Propiedades del aire a 25°C
 T_inf = 298.15  # K (25°C)
+Ts=373.15
+Tf=0.5*(T_inf+Ts)
 P = 101325  # Pa (presión atmosférica)
 
-rho = CP.PropsSI('D', 'T', T_inf, 'P', P, 'Air')  # Densidad (kg/m³)
-mu = CP.PropsSI('V', 'T', T_inf, 'P', P, 'Air')  # Viscosidad dinámica (Pa.s)
+rho = CP.PropsSI('D', 'T', Tf, 'P', P, 'Air')  # Densidad (kg/m³)
+mu = CP.PropsSI('V', 'T', Tf, 'P', P, 'Air')  # Viscosidad dinámica (Pa.s)
 nu = mu / rho  # Viscosidad cinemática (m²/s)
-k = CP.PropsSI('L', 'T', T_inf, 'P', P, 'Air')  # Conductividad térmica (W/m.K)
-Pr = CP.PropsSI('PRANDTL', 'T', T_inf, 'P', P, 'Air')  # Número de Prandtl
+k = CP.PropsSI('L', 'T', Tf, 'P', P, 'Air')  # Conductividad térmica (W/m.K)
+Pr = CP.PropsSI('PRANDTL', 'T', Tf, 'P', P, 'Air')  # Número de Prandtl
 
 # Condiciones del problema
-U_inf = 10  # m/s (velocidad del aire)
+U_inf = 5  # m/s (velocidad del aire)
 L = 1  # m (longitud de la placa)
 
 # Cálculo del número de Reynolds
