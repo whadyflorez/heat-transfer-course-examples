@@ -32,7 +32,7 @@ def coeficiente_conveccion_cilindro(T_s, T_inf, D, L, orientacion):
     if orientacion == "vertical":
         Nu = (0.825 + (0.387 * Ra**(1/6)) / (1 + (0.492 / Pr)**(9/16))**(8/27))**2
     else:  # horizontal
-        Nu = 0.36 + (0.518 * Ra**(1/4)) / (1 + (0.559 / Pr)**(9/16))**(4/9)
+        Nu = (0.6 + (0.387 * Ra**(1/6)) / (1 + (0.559 / Pr)**(9/16))**(8/27))**2
     
     h = (Nu * k) / L_char  # Coeficiente de convección
     
@@ -42,8 +42,8 @@ def coeficiente_conveccion_cilindro(T_s, T_inf, D, L, orientacion):
 # Parámetros de entrada
 T_s = 22+273.15   # K (77°C)
 T_inf = 2+273.15  # K (27°C)
-D = 0.10  # m (diámetro del cilindro)
-L = 0.10  # m (longitud del cilindro)
+D = 0.20  # m (diámetro del cilindro)
+L = 0.6 # m (longitud del cilindro)
 
 # Cálculo del coeficiente de convección
 h_vertical = coeficiente_conveccion_cilindro(T_s, T_inf, D, L, "vertical")
