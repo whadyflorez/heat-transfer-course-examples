@@ -5,7 +5,7 @@ Created on Mon Feb 23 07:47:24 2026
 
 @author: whadymacbook2016
 """
-from sympy import symbols, linsolve,latex,expand
+from sympy import symbols, linsolve,latex,expand,diff,exp
 from sympy import init_printing
 from IPython.display import display
 
@@ -27,3 +27,9 @@ solucion_latex=latex(solucion)
 x,y=list(solucion)[0]
 display(x)
 display(y)
+
+#derivadas
+x,y=symbols('x y')
+derivada=diff(x**2*exp(-x),x)
+display(derivada) 
+
