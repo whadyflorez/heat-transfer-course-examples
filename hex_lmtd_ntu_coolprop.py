@@ -44,6 +44,7 @@ Tfilm_c = 0.5*(Tc_in + Tc_out)
 rho_c, cp_c, k_c, mu_c = water_props(Tfilm_c, p)
 Tc_out = Tc_in + Qdot/(m_dot_c*cp_c)  # corregido
 
+#calcular el Cmin y Cmax
 Ch = m_dot_h * cp_h
 Cc = m_dot_c * cp_c
 Cmin = min(Ch, Cc); Cmax = max(Ch, Cc)
